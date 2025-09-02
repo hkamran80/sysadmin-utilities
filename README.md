@@ -16,24 +16,24 @@ A set of utilities to help manage servers.
 
 1. Clone this repository
 
-   ```bash
+    ```bash
 git clone <https://github.com/hkamran80/sysadmin-utilities>
 cd sysadmin-utilities
-   ```
+    ```
 
 2. Copy the `.service` files to the systemd folder
 
-   ```bash
+    ```bash
 cp startup-notify/startup-notify.service /etc/systemd/system/
 cp shutdown-notify/shutdown-notify.service /etc/systemd/system/
-   ```
+    ```
 
 3. Make the scripts executable
 
-   ```bash
+    ```bash
 chmod +x startup-notify/startup-notify.sh
 chmod +x shutdown-notify/shutdown-notify.sh
-   ```
+    ```
 
 4. Update the unit files to use the correct path
 
@@ -42,9 +42,9 @@ chmod +x shutdown-notify/shutdown-notify.sh
 
 5. Enable and start the services
 
-   ```bash
+    ```bash
 sudo systemctl enable startup-notify.service
 sudo systemctl enable shutdown-notify.service
 sudo systemctl start startup-notify.service
 sudo systemctl start shutdown-notify.service
-   ```
+    ```
