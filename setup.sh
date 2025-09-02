@@ -3,6 +3,8 @@
 echo "This script will attempt to set up all utilities."
 echo "Additional setup may be required for webhooks, directories, and more."
 
+sudo -v
+
 utilities=(
     "startup-notify"
     "shutdown-notify"
@@ -12,10 +14,10 @@ utilities=(
 for utility in "${utilities[@]}"; do
     echo "Setting up $utility..."
 
-    sed "s:/home/\$USER/sysadmin-utilities:$(pwd):" "$dir/$dir.service" > "/etc/systemd/system/$dir.service"
-    chmod +x "$dir/$dir.sh"
+    sed "s:/home/\$USER/sysadmin-utilities:$(pwd):" "$utility/$utility.service" > "/etc/systemd/system/$utility.service"
+    chmod +x "$utility/$utility.sh"
 
-    sudo systemctl enable "$dir.service"
+    sudo systemctl enable "$utility.service"
 
     echo "Set up complete."
 done
