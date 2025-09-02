@@ -56,3 +56,5 @@ sudo systemctl start startup-notify.service
 sudo systemctl start shutdown-notify.service
 sudo systemctl start start-compose-services.service
   ```
+
+**Or**, after cloning, run the `setup.sh` script.
