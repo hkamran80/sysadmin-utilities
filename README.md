@@ -17,7 +17,7 @@ A set of utilities to help manage servers.
 1. Clone this repository
 
   ```bash
-git clone <https://github.com/hkamran80/sysadmin-utilities>
+git clone https://github.com/hkamran80/sysadmin-utilities
 cd sysadmin-utilities
   ```
 
