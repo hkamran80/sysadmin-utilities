@@ -1,0 +1,13 @@
+[Unit]
+Description=Send Discord Notification on Shutdown
+
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStop=/home/$USER/sysadmin-utilities/shutdown-notify/shutdown-notify.sh
+
+[Install]
+WantedBy=multi-user.target

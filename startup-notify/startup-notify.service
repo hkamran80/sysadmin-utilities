@@ -7,7 +7,6 @@ After=network-online.target
 [Service]
 Type=oneshot
 ExecStart=/home/$USER/sysadmin-utilities/startup-notify/startup-notify.sh
-RemainAfterExit=true
 
 [Install]
 WantedBy=multi-user.target
