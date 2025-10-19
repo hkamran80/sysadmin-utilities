@@ -18,7 +18,7 @@ IPSET_DIR="/var/lib/ipset"
 # Check if a set with the same name already exists and destroy it
 if sudo ipset -t list | grep -q "${IPSET_NAME}"; then
     echo "Destroying old ipset '${IPSET_NAME}'..."
-    sudo ipset destroy "${IPSET_NAME}"
+    sudo ipset flush "${IPSET_NAME}"
 fi
 
 # Create a new ipset with the specified name
