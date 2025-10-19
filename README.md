@@ -16,6 +16,12 @@ A set of utilities to help manage servers.
 
   Optional: a [Discord webhook](https://support.discord.com/hc/articles/228383668) URL
 
+- UFW Geoblocking: block connections to certain countries
+
+  Prerequisites: UFW and `ipset`
+
+  **Note:** This is not automatically set up.
+
 ## Installation
 
 1. Clone this repository
